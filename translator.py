@@ -4,11 +4,11 @@ import json
 from googletrans import Translator
 
 
-def papago_to_ko(source: str):
+def papago_to_ko(generated: str):
     try:
         client_id = os.environ["NAVER_API_CLIENT"]
         client_secret = os.environ["NAVER_API_SECRET"]
-        encText = urllib.parse.quote(source)
+        encText = urllib.parse.quote(generated)
         data = "source=en&target=ko&text=" + encText
         url = "https://openapi.naver.com/v1/papago/n2mt"
         request = urllib.request.Request(url)

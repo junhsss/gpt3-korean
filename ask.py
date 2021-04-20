@@ -4,7 +4,7 @@ import click
 import os
 from dotenv import load_dotenv
 
-from utils import googletrans_to_en, googletrans_to_ko, papago_to_ko
+from translator import googletrans_to_en, googletrans_to_ko, papago_to_ko
 
 load_dotenv()
 
