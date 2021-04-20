@@ -24,7 +24,7 @@ def main(question):
         engine="davinci",
         prompt=format_prompt(question_en),
         max_tokens=500,
-        temperature=0.8,
+        top_p=0.95,
     )
 
     generated = question_en + response["choices"][0]["text"]
