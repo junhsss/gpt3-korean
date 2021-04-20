@@ -26,9 +26,10 @@ ask --question "기계와 두뇌는 무엇이 다른가?"
 ask --question "Brains, Minds and Machines. What are the differences?"
 ```
 
-- Example Output
+<a onclick="this.nextSibling.style.display=(this.nextSibling.style.display=='none')?'block':'none';" href="javascript:void(0)">
+(예시) 두뇌, 마음, 기계. 어떤 차이가 있을까?
+</a><div style="DISPLAY: none">
 
-```
 In English:
 
 Brains, Minds and Machines. What are the differences?
@@ -129,7 +130,8 @@ In Korean (Google Translated):
 정신 상태와 뇌 상태가 같은 방식으로 컴퓨터 상태에 매핑되지 않는다는 것을 주목하십시오. 따라서 몇 초가 걸리는 매우 간단한 추론 과정과 관련된 정신 활동은 10만 회선 컴퓨터 프로그램의 실행일 수 있다. 정신적 상태와 컴퓨터 상태 간의 차이는 간단한 예로 설명할 수 있다.
 
 여러분이 친구의 차에 앉아 블루투스 장치를 통해 대화를 나누고 있다고 가정합시다. Bluetooth 장치가 친구의 전화기에 연결되어 있습니다. (...후략)
-```
+
+</div>
 
 ## Environmental Variables
 
