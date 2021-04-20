@@ -23,7 +23,7 @@ def main(question):
     response = openai.Completion.create(
         engine="davinci",
         prompt=format_prompt(question_en),
-        max_tokens=40,
+        max_tokens=500,
         temperature=0.8,
     )
 
