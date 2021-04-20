@@ -37,3 +37,11 @@ rfc3986==1.4.0
 sniffio==1.2.0
 tqdm==4.60.0
 urllib3==1.26.4
+certifi==2020.12.5
+chardet==4.0.0
+-e git+https://github.com/junhsss/gpt3-korean.git@6c477c9c6d50b36f53743b38c37dfb842cf4b7d8#egg=gpt3_korean
+idna==2.10
+openai==0.6.3
+requests==2.25.1
+tqdm==4.60.0
+urllib3==1.26.4
