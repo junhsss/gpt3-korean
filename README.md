@@ -26,7 +26,6 @@ ask --question "기계와 두뇌는 무엇이 다른가?"
 ask --question "Brains, Minds and Machines. What are the differences?"
 ```
 
-```
 In English:
 
 Brains, Minds and Machines. What are the differences?
@@ -128,9 +127,7 @@ In Korean (Google Translated):
 
 여러분이 친구의 차에 앉아 블루투스 장치를 통해 대화를 나누고 있다고 가정합시다. Bluetooth 장치가 친구의 전화기에 연결되어 있습니다. (...후략)
 
-```
 
-```
 In English:
 
 Brains, Minds and Machines. What are the differences? A machine can by virtue of executing a program carry out precisely defined mathematical operations. A human brain cannot do this.
@@ -175,7 +172,6 @@ In Korean (Google Translated):
 수학적 알고리즘은이 메커니즘의 최적 설계의 문제를 해결하기 위해 이러한 메커니즘 및 방법을 구현 자로 사용하는 메커니즘 및 방법을 제어하는 ​​방법을 해결하기 위해서도 인간의 마음의 알고리즘과 공통점이 많습니다. 마찬가지로, 알고리즘의 공식화 및 구현 수단으로 사용되는 컴퓨터 프로그래밍 언어는 인간이 사용하는 것을 개발해야했으며 인간 언어에서 파생됩니다.
 
 따라서 인공 지능은 기계에 의한 마음의 구현에서 동일한 종류의 알고리즘을 적용하고 있습니다.       (...후략)
-```
 
 ## Environmental Variables
 
