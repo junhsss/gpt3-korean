@@ -1,9 +1,10 @@
 import os
 import urllib
 import json
+from googletrans import Translator
 
 
-def papago(source: str):
+def papago_to_ko(source: str):
     try:
         client_id = os.environ["NAVER_API_CLIENT"]
         client_secret = os.environ["NAVER_API_SECRET"]
@@ -24,3 +25,13 @@ def papago(source: str):
             raise ValueError
     except:
         raise ValueError
+
+
+def googletrans_to_en(question: str):
+    translator = Translator()
+    return translator.translate(question, dest="en").text
+
+
+def googletrans_to_ko(generated: str):
+    translator = Translator()
+    return translator.translate(generated, dest="ko").text

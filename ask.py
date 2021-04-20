@@ -1,47 +1,46 @@
 import os
 import openai
 import click
-from googletrans import Translator
 import os
 from dotenv import load_dotenv
 
-from utils import papago
+from utils import googletrans_to_en, googletrans_to_ko, papago_to_ko
 
 load_dotenv()
 
 openai.api_key = os.environ["OPENAI_API_SECRET"]
 
 
-def prompt(string):
+def format_prompt(string):
     return f'The most fundamental, and modern version among various answers to the question "{string}" is the following.'
 
 
 @click.command()
 @click.option("--question")
 def main(question):
-    translator = Translator()
-    source = translator.translate(question, dest="en")
+    question_en = googletrans_to_en(question)
 
     response = openai.Completion.create(
         engine="davinci",
-        prompt=prompt(source.text),
+        prompt=format_prompt(question_en),
         max_tokens=40,
         temperature=0.8,
     )
 
+    generated = question_en + response["choices"][0]["text"]
+
     print("In English: \n")
-    print(source.text + response["choices"][0]["text"])
+    print(generated)
+    print(generated + "\t (...omitted)")
 
     try:
-        x = papago(source.text + response["choices"][0]["text"])
+        generated_ko = papago_to_ko(generated)
         print("\nIn Korean (Papago Translated): \n")
-        print(x + "\t (...omitted)")
     except ValueError:
-        x = translator.translate(
-            source.text + response["choices"][0]["text"], dest="ko"
-        ).text
+        generated_ko = googletrans_to_ko(generated)
         print("\nIn Korean (Google Translated): \n")
-        print(x + "\t (...후략)")
+
+    print(generated_ko + "\t (...후략)")
 
 
 if __name__ == "__main__":
