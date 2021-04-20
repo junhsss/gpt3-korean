@@ -3,37 +3,13 @@ import openai
 import click
 from googletrans import Translator
 import os
-import sys
-import urllib.request
-import json
 from dotenv import load_dotenv
+
+from utils import papago
 
 load_dotenv()
 
 openai.api_key = os.environ["OPENAI_API_SECRET"]
-
-
-def papago(source: str):
-    try:
-        client_id = os.environ["NAVER_API_CLIENT"]
-        client_secret = os.environ["NAVER_API_SECRET"]
-        encText = urllib.parse.quote(source)
-        data = "source=en&target=ko&text=" + encText
-        url = "https://openapi.naver.com/v1/papago/n2mt"
-        request = urllib.request.Request(url)
-        request.add_header("X-Naver-Client-Id", client_id)
-        request.add_header("X-Naver-Client-Secret", client_secret)
-        response = urllib.request.urlopen(request, data=data.encode("utf-8"))
-        rescode = response.getcode()
-        if rescode == 200:
-            response_body = response.read()
-            return json.loads(response_body.decode("utf-8"))["message"]["result"][
-                "translatedText"
-            ]
-        else:
-            raise ValueError
-    except:
-        raise ValueError
 
 
 def prompt(string):
@@ -49,7 +25,7 @@ def main(question):
     response = openai.Completion.create(
         engine="davinci",
         prompt=prompt(source.text),
-        max_tokens=300,
+        max_tokens=40,
         temperature=0.8,
     )
 
