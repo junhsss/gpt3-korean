@@ -26,10 +26,7 @@ ask --question "기계와 두뇌는 무엇이 다른가?"
 ask --question "Brains, Minds and Machines. What are the differences?"
 ```
 
-<a onclick="this.nextSibling.style.display=(this.nextSibling.style.display=='none')?'block':'none';" href="javascript:void(0)">
-(예시) 두뇌, 마음, 기계. 어떤 차이가 있을까?
-</a><div style="DISPLAY: none">
-
+```
 In English:
 
 Brains, Minds and Machines. What are the differences?
@@ -131,7 +128,7 @@ In Korean (Google Translated):
 
 여러분이 친구의 차에 앉아 블루투스 장치를 통해 대화를 나누고 있다고 가정합시다. Bluetooth 장치가 친구의 전화기에 연결되어 있습니다. (...후략)
 
-</div>
+```
 
 ## Environmental Variables
 
@@ -139,3 +136,7 @@ In Korean (Google Translated):
 
 - OpenAI API키 (필수)
 - 네이버 API 키 (선택, 미입력시 구글 번역)
+
+```
+
+```
