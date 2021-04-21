@@ -1,6 +1,6 @@
 # gpt3-korean
 
-gpt3 with papago
+gpt3 with papago (for fun)
 
 ## Installation (macOS)
 
@@ -192,11 +192,7 @@ In Korean (Google Translated):
 
 ## Environmental Variables
 
-.env 파일 명세
+.env 파일을 만들어
 
 - OpenAI API키 (필수)
-- 네이버 API 키 (선택, 미입력시 구글 번역)
-
-```
-
-```
+- 네이버 API 키 (선택)

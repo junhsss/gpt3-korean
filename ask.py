@@ -4,7 +4,7 @@ import click
 import os
 from dotenv import load_dotenv
 
-from translator import googletrans_to_en, googletrans_to_ko, papago_to_ko
+from translator import translate_papago, translate_google
 
 load_dotenv()
 
@@ -18,13 +18,13 @@ def format_prompt(string):
 @click.command()
 @click.option("--question")
 def main(question):
-    question_en = googletrans_to_en(question)
+    question_en = translate_google(question, "en")
 
     response = openai.Completion.create(
         engine="davinci",
         prompt=format_prompt(question_en),
-        max_tokens=500,
-        top_p=0.95,
+        max_tokens=100,
+        top_p=0.98,
     )
 
     generated = question_en + response["choices"][0]["text"]
@@ -34,10 +34,10 @@ def main(question):
     print(generated + "\t (...omitted)")
 
     try:
-        generated_ko = papago_to_ko(generated)
+        generated_ko = translate_papago(generated, "ko")
         print("\nIn Korean (Papago Translated): \n")
     except ValueError:
-        generated_ko = googletrans_to_ko(generated)
+        generated_ko = translate_google(generated, "ko")
         print("\nIn Korean (Google Translated): \n")
 
     print(generated_ko + "\t (...후략)")
