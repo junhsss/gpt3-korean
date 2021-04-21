@@ -20,6 +20,7 @@ pip install -e .
 translate --source "Brains, Minds and Machines. What are the differences?"
 ```
 
+```
 Source: Are you nuts?
 
 Translated (Google): 너 견과류 야?
@@ -46,6 +47,7 @@ Translated (GPT):
         거짓말 치는 놈.
         개미가 돼버렸니?
         과장 아니야?
+```
 
 # Question Answering
 
