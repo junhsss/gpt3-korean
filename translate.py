@@ -18,7 +18,7 @@ def format_prompt(string, dest="en"):
         + "English: None of your business\nKorean: 신경 꺼.\n\n"
         + "English: Who are you?\nKorean: 누구냐?\n\n"
         + "English: That makes no sense at all.\nKorean: 그건 말이 안되잖아.\n\n"
-        + "English: Life Has Never Been Better, Thanks To You! \nKorean: 네 덕분에 삶이 너무 즐거ㅇ워.\n\n"
+        + "English: Life Has Never Been Better, Thanks To You! \nKorean: 네 덕분에 삶이 너무 즐거워.\n\n"
         + "English: You gotta do it anyway.\nKorean: 그래도 해야지 뭐 어쩌겠어.\n\n"
         + f"English: {string}\nKorean: "
     )
@@ -37,7 +37,7 @@ def main(source):
             engine="davinci",
             prompt=format_prompt(source),
             max_tokens=100,
-            top_p=0.8923142134,
+            top_p=0.95,
             frequency_penalty=0.0,
             presence_penalty=0.0,
             stop=["\n"],
