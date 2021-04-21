@@ -12,9 +12,16 @@ virtualenv venv
 pip install -e .
 ```
 
+## Environmental Variables
+
+.env 파일 명세
+
+- OpenAI API키 (필수)
+- 네이버 API 키 (선택)
+
 ## Usage
 
-# Translation
+### Translation
 
 ```shell
 translate --source "Are you nuts?"
@@ -49,7 +56,7 @@ Translated (GPT):
         과장 아니야?
 ```
 
-# Question Answering
+### Question Answering
 
 - 한국어 : 파파고 -> gpt3 -> 파파고
 
@@ -126,15 +133,4 @@ In Korean (Google Translated):
 컴퓨팅 기계를 구현자로 사용하여 이러한 메커니즘과 방법을 제어하는 최적의 설계 문제를 해결하기 위한 수학적 알고리듬도 인간 마음의 알고리듬과 많은 공통점을 가지고 있다. 마찬가지로, 알고리즘의 공식화 및 구현의 수단으로서 기능하는 컴퓨터 프로그래밍 언어는 인간 언어에서 파생된 것이다.
 
 인공지능은 기계에 의한 마음의 구현에 있어서 같은 종류의 알고리즘의 적용이고, (...후략)
-```
-
-## Environmental Variables
-
-.env 파일을 만들어
-
-- OpenAI API키 (필수)
-- 네이버 API 키 (선택)
-
-```
-
 ```
