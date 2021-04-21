@@ -14,6 +14,41 @@ pip install -e .
 
 ## Usage
 
+# Translation
+
+```shell
+translate --source "Brains, Minds and Machines. What are the differences?"
+```
+
+Source: Are you nuts?
+
+Translated (Google): 너 견과류 야?
+
+Translated (GPT):
+
+        기침을 하는 것 같아.
+        개구리다.
+        개 짖음 아니?
+        깨비같아.
+        괜찮아?
+        그래도 이해가 가는 거야?
+        깜놀.
+        거짓말 미칠듯이 행동한다.
+        까칠한 사람이다.
+        거짓말 하는 거야?
+        갑자기 까놓고 싶다.
+        가식새끼 아이구나.
+        깜짝 소리 치는 거 아냐?
+        갑자기 뭐야!
+        갑작스럽게 짜증나는데?
+        그럼 머리 좀 깎아라.
+        그렇게 말하는 거 당연하다 믿지마.
+        거짓말 치는 놈.
+        개미가 돼버렸니?
+        과장 아니야?
+
+# Question Answering
+
 - 한국어 : 파파고 -> gpt3 -> 파파고
 
 ```shell
