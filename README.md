@@ -1,6 +1,6 @@
 # gpt3-korean
 
-gpt3 with papago (for fun)
+gpt3 korean demo (for fun)
 
 ## Installation (macOS)
 
@@ -17,7 +17,7 @@ pip install -e .
 # Translation
 
 ```shell
-translate --source "Brains, Minds and Machines. What are the differences?"
+translate --source "Are you nuts?"
 ```
 
 ```
