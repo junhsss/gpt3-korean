@@ -10,7 +10,7 @@ load_dotenv()
 
 openai.api_key = os.environ["OPENAI_API_SECRET"]
 
-def format_prompt(string, dest="en"):
+def format_prompt(string):
     txt = (
         "English: It couldn’t be better than this!\nKorean: 이보다 더 좋을 수는 없어.\n\n"
         + "English: Don’t get me wrong.\nKorean: 오해하지 마.\n\n"
