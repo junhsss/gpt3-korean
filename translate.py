@@ -37,7 +37,7 @@ def main(source):
             engine="davinci",
             prompt=format_prompt(source),
             max_tokens=100,
-            top_p=0.95,
+            top_p=0.98,
             frequency_penalty=0.0,
             presence_penalty=0.0,
             stop=["\n"],

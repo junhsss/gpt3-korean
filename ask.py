@@ -3,6 +3,7 @@ import openai
 import click
 import os
 from dotenv import load_dotenv
+import textwrap
 
 from utils import translate_papago, translate_google
 
@@ -29,18 +30,18 @@ def main(question):
 
     generated = question_en + response["choices"][0]["text"]
 
-    print("In English: \n")
-    print(generated)
-    print(generated + "\t (...omitted)")
+    click.secho("In English:", fg="green")
+    click.echo(textwrap.fill(generated + "\t (...omitted)"))
+    
 
     try:
         generated_ko = translate_papago(generated, "ko")
-        print("\nIn Korean (Papago Translated): \n")
+        click.secho("\nIn Korean (Papago Translated):", fg="green")
     except ValueError:
         generated_ko = translate_google(generated, "ko")
-        print("\nIn Korean (Google Translated): \n")
+        click.secho("\nIn Korean (Google Translated):", fg="green")
 
-    print(generated_ko + "\t (...후략)")
+    click.echo(textwrap.fill(generated_ko + "\t (...후략)"))
 
 
 if __name__ == "__main__":
